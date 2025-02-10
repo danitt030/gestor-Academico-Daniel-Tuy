@@ -9,7 +9,7 @@ import authRoutes from "../src/auth/auth.routes.js"
 import usuarioRoutes from "../src/usuario/usuario.routes.js"
 import cursoRoutes from "../src/curso/curso.routes.js"
 import profesorRoutes from "../src/profesor/profesor.routes.js"
-import AlumnosRoutes from "../src/alumno/alumno.routes.js"
+import alumnosRoutes from "../src/alumno/alumno.routes.js"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js"
 
 const middlewares = (app) => {
@@ -26,7 +26,7 @@ const routes = (app) =>{
     app.use("/gestorAcademico/v1/usuario", usuarioRoutes)
     app.use("/gestorAcademico/v1/curso", cursoRoutes)
     app.use("/gestorAcademico/v1/profesor", profesorRoutes)
-    app.use("/gestorAcademico/v1/alumno", AlumnosRoutes)
+    app.use("/gestorAcademico/v1/alumno", alumnosRoutes)
 
 }
 
