@@ -1,0 +1,662 @@
+{
+	"info": {
+		"_postman_id": "5d0db4a3-d7fe-4bad-b29c-ff0c2b8071df",
+		"name": "gestorAcademico Daniel Tuy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37636976"
+	},
+	"item": [
+		{
+			"name": "Registro estudiantes y alumnos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Daniel\",\r\n    \"apellido\": \"Tuy\",\r\n    \"nombreUsuario\": \"dawnittw030q\",\r\n    \"email\": \"prueba@gmail.com\",\r\n    \"contraseña\": \"Cremasw31*\",\r\n    \"role\": \"TEACHER_ROLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/auth/registro",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"auth",
+						"registro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login estudiantes y alumnos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombreUsuario\": \"danitt030q\",\r\n    \"contraseña\": \"Cremasw31*\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/usuario/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"usuario",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Usuario ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/usuario/findUser/67a8aff5a96445f366a23e4b",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"usuario",
+						"findUser",
+						"67a8aff5a96445f366a23e4b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar usuario",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Dani\",\r\n    \"apellido\": \"Tuchez\",\r\n    \"nombreUsuario\": \"danitt0300\",\r\n    \"email\": \"dqtuy@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/usuario/actualizarUsuario/67a8aff5a96445f366a23e4b",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"usuario",
+						"actualizarUsuario",
+						"67a8aff5a96445f366a23e4b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar contraseña",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nuevaContraseña\": \"Cremasw31*\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/usuario/actualizarContrasena/67a8c4eb65846ff01e41fc47",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"usuario",
+						"actualizarContrasena",
+						"67a8c4eb65846ff01e41fc47"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/usuario/deleteUsuario/67a8c4eb65846ff01e41fc47",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"usuario",
+						"deleteUsuario",
+						"67a8c4eb65846ff01e41fc47"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear curso",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"papa\",\r\n    \"descripcion\": \"Cpepede segunda ley de newton\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/curso/registroCurso",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"curso",
+						"registroCurso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Cursos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/curso",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"curso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar curso por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/curso/findCurso/67a8fd3f73798596156c7fcd",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"curso",
+						"findCurso",
+						"67a8fd3f73798596156c7fcd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar curso",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Lengua y literatura\",\r\n    \"descripcion\": \"Clase de la antiagua roma\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/curso/actualizarCurso/67a95ac7a1899e73e847272c",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"curso",
+						"actualizarCurso",
+						"67a95ac7a1899e73e847272c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar cursos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/curso/deleteCurso/67a95ac7a1899e73e847272c",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"curso",
+						"deleteCurso",
+						"67a95ac7a1899e73e847272c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registro profesor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Danssiel\",\r\n    \"apellido\": \"Tussy\",\r\n    \"nombreUsuario\": \"danitt030sas55\",\r\n    \"email\": \"danittssa@gmail.com\",\r\n    \"contraseña\": \"Cremasw31*\",\r\n    \"curso\": \"Matematicas\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/profesor/registroProfesor",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"profesor",
+						"registroProfesor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar profesores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/profesor/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"profesor",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar profesor ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/profesor/findProfesor/67a95feedbbba9f3753354a6",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"profesor",
+						"findProfesor",
+						"67a95feedbbba9f3753354a6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Profesores",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Danssiwwel\",\r\n    \"apellido\": \"Tusswwy\",\r\n    \"nombreUsuario\": \"danitwwt030sas55\",\r\n    \"email\": \"danittsqwwsa@gmail.com\",\r\n    \"contraseña\": \"Cremqwasw31*\",\r\n    \"curso\": \"Matematicwqwas\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/profesor/actualizarProfesor/67a960d9ca47ead060bdf2b3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"profesor",
+						"actualizarProfesor",
+						"67a960d9ca47ead060bdf2b3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Profesores",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/profesor/deleteProfesor/67a960d9ca47ead060bdf2b3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"profesor",
+						"deleteProfesor",
+						"67a960d9ca47ead060bdf2b3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Alumno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"dsdassasd\",\r\n    \"apellido\": \"Tuasasssddssy\",\r\n    \"nombreUsuario\": \"danasasitsddst030sas55\",\r\n    \"email\": \"danittsdssdsaassasa@gmail.com\",\r\n    \"contraseña\": \"Cremasasasw31*\",\r\n    \"curso\": \"liassateratura\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/alumno/registroAlumno",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"alumno",
+						"registroAlumno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Alumnos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/alumno/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"alumno",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Alumno Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/alumno/findAlumno/67a964b7bf61dad8b483268b",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"alumno",
+						"findAlumno",
+						"67a964b7bf61dad8b483268b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Alumno",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"dsdasssasaasd\",\r\n    \"apellido\": \"Tuasassaasssddssy\",\r\n    \"nombreUsuario\": \"danasasitsddst030sas55\",\r\n    \"email\": \"danittsdssdsassaaassasa@gmail.com\",\r\n    \"contraseña\": \"Cremasasasasasw31*\",\r\n    \"curso\": \"liassatersasaatura\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/alumno/actualizarAlumno/67a9658bbf61dad8b4832694",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"alumno",
+						"actualizarAlumno",
+						"67a9658bbf61dad8b4832694"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Alumno",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/gestorAcademico/v1/alumno/deleteAlumno/67a9658bbf61dad8b4832694",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"gestorAcademico",
+						"v1",
+						"alumno",
+						"deleteAlumno",
+						"67a9658bbf61dad8b4832694"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
